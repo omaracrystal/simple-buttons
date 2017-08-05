@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50c16315-f277-4577-8998-921f062e8bca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/favicon.ico" afterPath="$PROJECT_DIR$/app/favicon.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/style.css" afterPath="$PROJECT_DIR$/app/assets/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/style.min.css" afterPath="$PROJECT_DIR$/app/assets/css/style.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scss/style.scss" afterPath="$PROJECT_DIR$/src/scss/style.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,13 +18,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scss/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3030">
-              <caret line="245" column="29" lean-forward="false" selection-start-line="245" selection-start-column="29" selection-end-line="245" selection-end-column="29" />
+            <state relative-caret-position="147">
+              <caret line="201" column="0" lean-forward="true" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
               <folding>
-                <marker date="1501951634000" expanded="false" signature="2:1224" ph="..." />
+                <marker date="1501952373000" expanded="false" signature="2:1224" ph="..." />
               </folding>
             </state>
           </provider>
@@ -32,10 +33,17 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="38" />
+            <state relative-caret-position="55">
+              <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favicon.ico" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/favicon.ico">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -46,6 +54,9 @@
       <find>control</find>
       <find>col2</find>
       <find>form-con</find>
+      <find>max-wi</find>
+      <find>login-wrap</find>
+      <find>login-text</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -56,8 +67,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/scss/mixins/_position.scss" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/src/scss/style.scss" />
+        <option value="$PROJECT_DIR$/app/index.html" />
       </list>
     </option>
   </component>
@@ -77,8 +88,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="362" />
-    <option name="y" value="33" />
+    <option name="x" value="393" />
+    <option name="y" value="23" />
     <option name="width" value="914" />
     <option name="height" value="700" />
   </component>
@@ -108,6 +119,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="crazy-cat-lady" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crazy-cat-lady" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crazy-cat-lady" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -212,15 +237,15 @@
       <option name="presentableId" value="Default" />
       <updated>1501937604814</updated>
       <workItem from="1501937606211" duration="3667000" />
-      <workItem from="1501944772173" duration="5677000" />
+      <workItem from="1501944772173" duration="6663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9344000" />
+    <option name="totallyTimeSpent" value="10330000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="362" y="33" width="914" height="700" extended-state="0" />
+    <frame x="393" y="23" width="914" height="700" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -366,22 +391,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="201" column="0" lean-forward="true" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+          <folding>
+            <marker date="1501952373000" expanded="false" signature="2:1224" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="38" />
+        <state relative-caret-position="55">
+          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3030">
-          <caret line="245" column="29" lean-forward="false" selection-start-line="245" selection-start-column="29" selection-end-line="245" selection-end-column="29" />
-          <folding>
-            <marker date="1501951634000" expanded="false" signature="2:1224" ph="..." />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/app/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>

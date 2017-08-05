@@ -201,12 +201,12 @@ button {
 }
 
 //Login Page
-.login-wrapper {
+.login-header-wrapper {
   margin-left: 50px;
   font-size: 15px;
   font-weight: 500;
 
-  .login-text {
+  .login-header-text {
     padding: 10px;
   }
 }
@@ -225,7 +225,7 @@ button {
 
 .logo-image {
   width: 60%;
-  max-width: 200px;
+  max-width: 220px;
   height: auto;
   margin: 10px;
 }
@@ -255,6 +255,11 @@ button {
   .login-page-container {
     flex-direction: column;
     height: auto;
+
+    .login-header-text {
+      margin-bottom: 45px;
+      padding: 0px 30px;
+    }
   }
 
   .logo-image {
