@@ -1,36 +1,32 @@
-# FastShell
-[![Build Status](https://travis-ci.org/HosseinKarami/fastshell.png?branch=master)](https://travis-ci.org/HosseinKarami/fastshell)
+# Crazy Cat Lady
 
-inspired by [FireShell](http://getfireshell.com)
-Fiercely quick front-end boilerplate and workflows.
+## By the Pixel Challenge
 
-The opinionated FastShell framework. Built for the modern developer. For teams and the individual, encouraging a better workflow. JavaScript task running, build processes, autominification and file concatenation, wrapped with an enhanced HTML5 boilerplated framework.
+### Task:
 
-* Source: [github.com/HosseinKarami/fastshell](http://github.com/HosseinKarami/fastshell)
-* Documentation: [DOCS.md](https://github.com/HosseinKarami/fastshell/blob/master/DOCS.md)
-* HomePage: [Fastshell](https://HosseinKarami.github.io/fastshell)
+Build a fully responsive login page from the provided design file for a new “Crazy Cat Lady" web application.
 
+### How:
 
-## License
+	• Create a codepen at https://codepen.io/pen/. You can build this locally, but if you do, please transfer everything to the Codepen you create.
 
-#### The MIT License (MIT)
+### What you’ll need: ASSETS (these are hosted on S3 and can be used in HTML and CSS)
 
-Copyright (c) FastShell
+	• Cats background: https://s3.amazonaws.com/btp-front-end-testing/cats.jpg
+	• Lock icon: https://s3.amazonaws.com/btp-front-end-testing/lock-icon.png
+	• Person icon: https://s3.amazonaws.com/btp-front-end-testing/person-Icon.png
+	• Logo: https://s3.amazonaws.com/btp-front-end-testing/logo.png
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
-of the Software, and to permit persons to whom the Software is furnished to do
-so, subject to the following conditions:
+### Design Mock-ups:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+	• Photoshop: https://s3.amazonaws.com/btp-front-end-testing/Front-end-developer.psd
+	• PNG: https://s3.amazonaws.com/btp-front-end-testing/Front-end-developer.png
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+### Direction:
+
+	• No need to wire the form into anything functional. Just slice and dice.
+	• Do not use any frameworks, etc. like bootstrap. We want to see how you build this completely custom.
+	• Do your best! We’re looking for accuracy to the design, ability to make good decisions with HTML and CSS and your ‘responsive' decision making.
+	• Please also let us know how long this took you to complete.
+	
+[![Mockup] (https://s3.amazonaws.com/btp-front-end-testing/Front-end-developer.png)]
