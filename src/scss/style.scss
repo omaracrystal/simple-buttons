@@ -47,6 +47,11 @@
 //Variables//
 $white: #ffffff;
 $site-background: $white;
+$primary-black: #231F20;
+$primary-pink: #F14986;
+$border-gray: #EAEDEC;
+
+$bold: 600;
 
 //Base//
 body {
@@ -59,10 +64,17 @@ body {
 
 input {
   border-radius: 5px;
+  cursor: default;
 }
 
 button {
   border-radius: 5px;
+  color: $primary-pink;
+  background: $primary-black;
+  border: none;
+  letter-spacing: 2px;
+  font-weight: $bold;
+  cursor: pointer;
 }
 
 //Helpers
@@ -78,7 +90,7 @@ button {
 
 .btn-full {
   width: 100%;
-  height: 42px;
+  height: 56px;
   text-transform: uppercase;
 }
 
@@ -90,16 +102,20 @@ button {
   height: 30px;
 
   .form-control {
-    font-size: 20px;
-    padding: 10px 35px 10px 35px;
+    font-size: 16px;
+    padding: 15px 55px;
     width: 100%;
+    border: 1px solid $border-gray;
+    box-shadow: 1px -1px #cacaca;
   }
 }
 
 .input-group-addon {
-position: absolute;
-padding: 10px;
-height: 20px;
+  position: absolute;
+  padding: 5px 12px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #cacaca;
 }
 
 //Login Page
@@ -121,7 +137,8 @@ width: 60%;
 }
 
 .login-form-container {
-
+  width: 240px;
+  margin: auto;
 }
 
 .login-page-container {
