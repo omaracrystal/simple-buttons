@@ -1,0 +1,74 @@
+body {
+  background: #ffffff;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0; }
+
+input {
+  border-radius: 5px; }
+
+button {
+  border-radius: 5px; }
+
+.side-by-side {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row; }
+
+.stack {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+
+.btn-full {
+  width: 100%;
+  height: 42px;
+  text-transform: uppercase; }
+
+.input-group {
+  width: 100%;
+  margin: 35px 0px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 30px; }
+  .input-group .form-control {
+    font-size: 20px;
+    padding: 10px 35px 10px 35px;
+    width: 100%; }
+
+.input-group-addon {
+  position: absolute;
+  padding: 10px;
+  height: 20px; }
+
+.login-page-background-image {
+  position: fixed;
+  background-image: url(https://s3.amazonaws.com/btp-front-end-testing/cats.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+  z-index: -1; }
+
+.logo-image {
+  height: auto;
+  width: 60%; }
+
+.login-page-container {
+  max-width: 800px;
+  margin: auto;
+  height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+  .login-page-container .col2 {
+    width: 50%;
+    margin: 30px; }
