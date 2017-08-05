@@ -79,6 +79,7 @@ $transition-hover: all 0.3s ease;
 //Base//
 body {
   background: $site-background;
+  color: $primary-black;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   line-height: 1.5;
   margin: 0;
@@ -159,12 +160,20 @@ button {
   align-items: center;
   height: 30px;
 
+  &:first-child {
+    margin-top: 0px;
+  }
+
   .form-control {
     font-size: 16px;
     padding: 15px 15px 15px 55px;
     width: 100%;
     border: 1px solid $border-gray;
     box-shadow: 1px -1px #cacaca;
+
+    &:focus {
+      outline: $primary-pink auto 5px;
+    }
   }
 
   &:hover,
@@ -184,11 +193,21 @@ button {
   display: flex;
   align-items: center;
   border-right: 1px solid #cacaca;
-  opacity: .5;
   transition: $transition-hover;
+  opacity: .5;
 }
 
 //Login Page
+.login-wrapper {
+  margin-left: 50px;
+  font-size: 15px;
+  font-weight: 500;
+
+  .login-text {
+    padding: 10px;
+  }
+}
+
 .login-page-background-image {
   position: fixed;
   background-image: url(https://s3.amazonaws.com/btp-front-end-testing/cats.jpg);
@@ -202,8 +221,9 @@ button {
 }
 
 .logo-image {
+  width: 60%;
   height: auto;
-  width: 65%;
+  margin: 10px;
 }
 
 .login-form-container {
@@ -217,8 +237,4 @@ button {
   height: 100vh;
   display: flex;
   align-items: center;
-
-  .login-text {
-    font-size: 18px;
-  }
 }

@@ -1,5 +1,6 @@
 body {
   background: #ffffff;
+  color: #231f20;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   line-height: 1.5;
   margin: 0;
@@ -70,12 +71,16 @@ button {
   -ms-flex-align: center;
       align-items: center;
   height: 30px; }
+  .input-group:first-child {
+    margin-top: 0px; }
   .input-group .form-control {
     font-size: 16px;
     padding: 15px 15px 15px 55px;
     width: 100%;
     border: 1px solid #eaedec;
     box-shadow: 1px -1px #cacaca; }
+    .input-group .form-control:focus {
+      outline: #f14986 auto 5px; }
   .input-group:hover .input-group-addon, .input-group:focus .input-group-addon, .input-group:active .input-group-addon, .input-group:visited .input-group-addon {
     opacity: 1; }
 
@@ -87,8 +92,15 @@ button {
   -ms-flex-align: center;
       align-items: center;
   border-right: 1px solid #cacaca;
-  opacity: .5;
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+  opacity: .5; }
+
+.login-wrapper {
+  margin-left: 50px;
+  font-size: 15px;
+  font-weight: 500; }
+  .login-wrapper .login-text {
+    padding: 10px; }
 
 .login-page-background-image {
   position: fixed;
@@ -102,8 +114,9 @@ button {
   z-index: -1; }
 
 .logo-image {
+  width: 60%;
   height: auto;
-  width: 65%; }
+  margin: 10px; }
 
 .login-form-container {
   width: 240px;
@@ -117,5 +130,3 @@ button {
   display: flex;
   -ms-flex-align: center;
       align-items: center; }
-  .login-page-container .login-text {
-    font-size: 18px; }
