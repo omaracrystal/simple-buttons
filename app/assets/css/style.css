@@ -115,6 +115,7 @@ button {
 
 .logo-image {
   width: 60%;
+  max-width: 200px;
   height: auto;
   margin: 10px; }
 
@@ -130,3 +131,22 @@ button {
   display: flex;
   -ms-flex-align: center;
       align-items: center; }
+
+@media (max-width: 1025px) {
+  .login-page-background-image {
+    background-position: 70%; } }
+
+@media (max-width: 600px) {
+  .login-page-container {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    height: auto; }
+  .logo-image {
+    margin-top: 35px; }
+  .col2 {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    -ms-flex-align: center;
+        align-items: center;
+    text-align: center; } }

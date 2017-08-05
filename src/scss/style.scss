@@ -55,6 +55,9 @@ $bold: 600;
 $bolder: 800;
 $transition-hover: all 0.3s ease;
 
+$mq-tablet: 1025px;
+$mq-mobile: 600px;
+
 //mixins
 @mixin button($bg, $text) {
   background: $bg;
@@ -222,6 +225,7 @@ button {
 
 .logo-image {
   width: 60%;
+  max-width: 200px;
   height: auto;
   margin: 10px;
 }
@@ -237,4 +241,31 @@ button {
   height: 100vh;
   display: flex;
   align-items: center;
+}
+
+@media (max-width: $mq-tablet) {
+  .login-page-background-image {
+    background-position: 70%;
+  }
+
+}
+
+@media (max-width: $mq-mobile) {
+
+  .login-page-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .logo-image {
+    margin-top: 35px;
+  }
+
+  .col2 {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+  }
 }
