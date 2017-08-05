@@ -1,6 +1,7 @@
 body {
   background: #ffffff;
   color: #231f20;
+  font-size: 14px;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   line-height: 1.5;
   margin: 0;
@@ -71,8 +72,6 @@ button {
   -ms-flex-align: center;
       align-items: center;
   height: 30px; }
-  .input-group:first-child {
-    margin-top: 0px; }
   .input-group .form-control {
     font-size: 16px;
     padding: 15px 15px 15px 55px;
@@ -122,6 +121,8 @@ button {
 .login-form-container {
   width: 240px;
   margin: auto; }
+  .login-form-container .input-group:first-child {
+    margin-top: 0px; }
 
 .login-page-container {
   max-width: 800px;

@@ -1,135 +1,81 @@
-////----------------------------------*\
-//// SCSS MIXINS
-////----------------------------------*/
-//
-//@import 'mixins/_position.scss';
-//
-////----------------------------------*\
-//// CONFIG MODULES
-////----------------------------------*/
-//
-//// Config modules
-//@import 'modules/_vars.scss';
-//@import 'modules/_clearfix.scss';
-//@import 'modules/_defaults.scss';
-//@import 'modules/_normalize.scss';
-////----------------------------------*\
-//// PARTIALS
-////----------------------------------*/
-//
-//@import 'partials/_header.scss';
-//@import 'partials/_nav.scss';
-//@import 'partials/_sidebar.scss';
-//@import 'partials/_main.scss';
-//@import 'partials/_footer.scss';
-//
-////----------------------------------*\
-//// OBJECTS & MODULES
-////----------------------------------*/
-//
-//@import 'modules/_buttons.scss';
-//@import 'modules/_inputs.scss';
-//@import 'modules/_lists.scss';
-//@import 'modules/_typography.scss';
-//@import 'modules/_misc.scss';
-//@import 'modules/_app.scss';
-//
-//// Enhancement modules
-//@import 'modules/_breakpoints.scss';
-//@import 'modules/_print.scss';
-//
-////----------------------------------*\
-//// VENDOR
-////----------------------------------*/
-//
-//@import 'vendor/_external.scss';
+//------------------------- VARIABLES -------------------------//
 
-//Variables//
+//colors
 $white: #ffffff;
 $site-background: $white;
 $primary-black: #231f20;
 $primary-pink: #f14986;
 $border-gray: #eaedec;
+$border-box-shadow: #cacaca;
 
+//fonts
+$font-base: 14px;
+$font-md: 15px;
+$font-lg: 18px;
 $bold: 600;
 $bolder: 800;
+
+//other
+$border-radius: 5px;
 $transition-hover: all 0.3s ease;
 
+//media queries
 $mq-tablet: 1025px;
 $mq-mobile: 600px;
 
-//mixins
+//urls
+$login-background-image: https://s3.amazonaws.com/btp-front-end-testing/cats.jpg;
+
+
+
+//------------------------- MIXINS -------------------------//
+
+//buttons
 @mixin button($bg, $text) {
   background: $bg;
-  border-radius: 5px;
-  color: $text;
   border: none;
-  letter-spacing: 1px;
-  font-weight: $bold;
+  border-radius: $border-radius;
+  color: $text;
   cursor: pointer;
+  font-weight: $bold;
+  letter-spacing: 1px;
   text-decoration: none !important;
   transition: $transition-hover;
 
   &:hover,
   &:focus,
   &:active {
-    color: $bg;
     background: $text;
+    color: $bg;
     font-weight: $bolder;
   }
 }
 
-//Base//
+
+//------------------------- BASE -------------------------//
+
 body {
   background: $site-background;
   color: $primary-black;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: $font-base;
   line-height: 1.5;
   margin: 0;
   padding: 0;
 }
 
+button {
+  @include button($primary-black, $primary-pink);
+}
+
 input {
-  border-radius: 5px;
+  border-radius: $border-radius;
   cursor: default;
 }
 
-.input-group {
-  transition: $transition-hover;
 
-  &:hover,
-  &:focus,
-  &:visited,
-  &:active {
+//------------------------- HELPERS -------------------------//
 
-    input {
-      &::-webkit-input-placeholder {
-        color: $primary-black;
-        opacity: 1 !important; /* for older chrome versions. may no longer apply. */
-      }
-
-      &:-moz-placeholder { /* Firefox 18- */
-        color: $primary-black;
-        opacity: 1 !important;
-      }
-
-      &::-moz-placeholder {  /* Firefox 19+ */
-        color: $primary-black;
-        opacity: 1 !important;
-      }
-
-      &:-ms-input-placeholder {
-        color: $primary-black;
-      }
-    }
-  }
-}
-
-button {
-  @include button($primary-black, $primary-pink)
-}
-
-//Helpers
 .col2 {
   width: 50%;
 }
@@ -144,35 +90,47 @@ button {
   flex-direction: column;
 }
 
+//------------------------- COMPONENTS -------------------------//
+
+//Buttons
 .btn-full {
   width: 100%;
-  font-size: 14px;
+  font-size: $font-base;
   height: 70px;
   text-transform: uppercase;
-
-
-  &:hover {
-
-  }
 }
 
+//Inputs / Forms
 .input-group {
-  width: 100%;
-  margin: 35px 0px;
-  display: flex;
   align-items: center;
+  display: flex;
   height: 30px;
+  margin: 35px 0px;
+  transition: $transition-hover;
+  width: 100%;
 
-  &:first-child {
-    margin-top: 0px;
+  &:hover,
+  &:focus,
+  &:visited,
+  &:active {
+
+    input {
+      &::-webkit-input-placeholder,
+      &:-moz-placeholder,
+      &::-moz-placeholder,
+      &:-ms-input-placeholder {
+        color: $primary-black;
+        opacity: 1 !important;
+      }
+    }
   }
 
   .form-control {
+    border: 1px solid $border-gray;
+    box-shadow: 1px -1px $border-box-shadow;
     font-size: 16px;
     padding: 15px 15px 15px 55px;
     width: 100%;
-    border: 1px solid $border-gray;
-    box-shadow: 1px -1px #cacaca;
 
     &:focus {
       outline: $primary-pink auto 5px;
@@ -191,65 +149,78 @@ button {
 }
 
 .input-group-addon {
-  position: absolute;
-  padding: 5px 12px;
-  display: flex;
   align-items: center;
   border-right: 1px solid #cacaca;
-  transition: $transition-hover;
+  display: flex;
+  padding: 5px 12px;
+  position: absolute;
   opacity: .5;
+  transition: $transition-hover;
 }
+
+
+//------------------------- PAGES -------------------------//
 
 //Login Page
-.login-header-wrapper {
-  margin-left: 50px;
-  font-size: 15px;
-  font-weight: 500;
-
-  .login-header-text {
-    padding: 10px;
-  }
-}
-
-.login-page-background-image {
-  position: fixed;
-  background-image: url(https://s3.amazonaws.com/btp-front-end-testing/cats.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height: 100%;
-  opacity: .3;
-  z-index: -1;
-}
-
-.logo-image {
-  width: 60%;
-  max-width: 220px;
-  height: auto;
-  margin: 10px;
-}
-
-.login-form-container {
-  width: 240px;
-  margin: auto;
-}
-
 .login-page-container {
+  align-items: center;
+  display: flex;
   max-width: 800px;
   margin: auto;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
 
-@media (max-width: $mq-tablet) {
   .login-page-background-image {
-    background-position: 70%;
+    background-image: url($login-background-image);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: fixed;
+    opacity: .3;
+    width: 100%;
+    z-index: -1;
   }
 
+  .login-header-wrapper {
+    font-size: $font-md;
+    font-weight: 500;
+    margin-left: 50px;
+
+    .login-header-text {
+      padding: 10px;
+    }
+  }
+
+  .logo-image {
+    height: auto;
+    margin: 10px;
+    max-width: 220px;
+    width: 60%;
+  }
+
+  .login-form-container {
+    margin: auto;
+    width: 240px;
+
+    .input-group:first-child {
+      margin-top: 0px;
+    }
+  }
 }
 
+
+//------------------------- MEDIA QUERIES -------------------------//
+
+//tablet
+@media (max-width: $mq-tablet) {
+
+  .login-page-container {
+    .login-page-background-image {
+      background-position: 70%;
+    }
+  }
+}
+
+//mobile
 @media (max-width: $mq-mobile) {
 
   .login-page-container {
@@ -260,17 +231,17 @@ button {
       margin-bottom: 45px;
       padding: 0px 30px;
     }
-  }
 
-  .logo-image {
-    margin-top: 35px;
-  }
+    .logo-image {
+      margin-top: 35px;
+    }
 
-  .col2 {
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
-    align-items: center;
-    text-align: center;
+    .col2 {
+      align-items: center;
+      margin: auto;
+      max-width: 400px;
+      text-align: center;
+      width: 100%;
+    }
   }
 }
