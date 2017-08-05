@@ -47,11 +47,34 @@
 //Variables//
 $white: #ffffff;
 $site-background: $white;
-$primary-black: #231F20;
-$primary-pink: #F14986;
-$border-gray: #EAEDEC;
+$primary-black: #231f20;
+$primary-pink: #f14986;
+$border-gray: #eaedec;
 
 $bold: 600;
+$bolder: 800;
+$transition-hover: all 0.3s ease;
+
+//mixins
+@mixin button($bg, $text) {
+  background: $bg;
+  border-radius: 5px;
+  color: $text;
+  border: none;
+  letter-spacing: 1px;
+  font-weight: $bold;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: $transition-hover;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $bg;
+    background: $text;
+    font-weight: $bolder;
+  }
+}
 
 //Base//
 body {
@@ -67,17 +90,46 @@ input {
   cursor: default;
 }
 
+.input-group {
+  transition: $transition-hover;
+
+  &:hover,
+  &:focus,
+  &:visited,
+  &:active {
+
+    input {
+      &::-webkit-input-placeholder {
+        color: $primary-black;
+        opacity: 1 !important; /* for older chrome versions. may no longer apply. */
+      }
+
+      &:-moz-placeholder { /* Firefox 18- */
+        color: $primary-black;
+        opacity: 1 !important;
+      }
+
+      &::-moz-placeholder {  /* Firefox 19+ */
+        color: $primary-black;
+        opacity: 1 !important;
+      }
+
+      &:-ms-input-placeholder {
+        color: $primary-black;
+      }
+    }
+  }
+}
+
 button {
-  border-radius: 5px;
-  color: $primary-pink;
-  background: $primary-black;
-  border: none;
-  letter-spacing: 2px;
-  font-weight: $bold;
-  cursor: pointer;
+  @include button($primary-black, $primary-pink)
 }
 
 //Helpers
+.col2 {
+  width: 50%;
+}
+
 .side-by-side {
   display: flex;
   flex-direction: row;
@@ -90,8 +142,14 @@ button {
 
 .btn-full {
   width: 100%;
-  height: 56px;
+  font-size: 14px;
+  height: 70px;
   text-transform: uppercase;
+
+
+  &:hover {
+
+  }
 }
 
 .input-group {
@@ -103,10 +161,20 @@ button {
 
   .form-control {
     font-size: 16px;
-    padding: 15px 55px;
+    padding: 15px 15px 15px 55px;
     width: 100%;
     border: 1px solid $border-gray;
     box-shadow: 1px -1px #cacaca;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+
+    .input-group-addon {
+      opacity: 1;
+    }
   }
 }
 
@@ -116,24 +184,26 @@ button {
   display: flex;
   align-items: center;
   border-right: 1px solid #cacaca;
+  opacity: .5;
+  transition: $transition-hover;
 }
 
 //Login Page
 .login-page-background-image {
-position: fixed;
-background-image: url(https://s3.amazonaws.com/btp-front-end-testing/cats.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center center;
-width: 100%;
-height: 100%;
-opacity: .3;
-z-index: -1;
+  position: fixed;
+  background-image: url(https://s3.amazonaws.com/btp-front-end-testing/cats.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+  z-index: -1;
 }
 
 .logo-image {
-height: auto;
-width: 60%;
+  height: auto;
+  width: 65%;
 }
 
 .login-form-container {
@@ -148,8 +218,7 @@ width: 60%;
   display: flex;
   align-items: center;
 
-  .col2 {
-    width: 50%;
-    margin: 30px;
+  .login-text {
+    font-size: 18px;
   }
 }

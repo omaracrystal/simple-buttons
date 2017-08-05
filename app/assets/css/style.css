@@ -9,14 +9,40 @@ input {
   border-radius: 5px;
   cursor: default; }
 
+.input-group {
+  transition: all 0.3s ease; }
+  .input-group:hover input::-webkit-input-placeholder, .input-group:focus input::-webkit-input-placeholder, .input-group:visited input::-webkit-input-placeholder, .input-group:active input::-webkit-input-placeholder {
+    color: #231f20;
+    opacity: 1 !important;
+    /* for older chrome versions. may no longer apply. */ }
+  .input-group:hover input:-moz-placeholder, .input-group:focus input:-moz-placeholder, .input-group:visited input:-moz-placeholder, .input-group:active input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #231f20;
+    opacity: 1 !important; }
+  .input-group:hover input::-moz-placeholder, .input-group:focus input::-moz-placeholder, .input-group:visited input::-moz-placeholder, .input-group:active input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #231f20;
+    opacity: 1 !important; }
+  .input-group:hover input:-ms-input-placeholder, .input-group:focus input:-ms-input-placeholder, .input-group:visited input:-ms-input-placeholder, .input-group:active input:-ms-input-placeholder {
+    color: #231f20; }
+
 button {
+  background: #231f20;
   border-radius: 5px;
-  color: #F14986;
-  background: #231F20;
+  color: #f14986;
   border: none;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-weight: 600;
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.3s ease; }
+  button:hover, button:focus, button:active {
+    color: #231f20;
+    background: #f14986;
+    font-weight: 800; }
+
+.col2 {
+  width: 50%; }
 
 .side-by-side {
   display: -ms-flexbox;
@@ -32,7 +58,8 @@ button {
 
 .btn-full {
   width: 100%;
-  height: 56px;
+  font-size: 14px;
+  height: 70px;
   text-transform: uppercase; }
 
 .input-group {
@@ -45,10 +72,12 @@ button {
   height: 30px; }
   .input-group .form-control {
     font-size: 16px;
-    padding: 15px 55px;
+    padding: 15px 15px 15px 55px;
     width: 100%;
-    border: 1px solid #EAEDEC;
+    border: 1px solid #eaedec;
     box-shadow: 1px -1px #cacaca; }
+  .input-group:hover .input-group-addon, .input-group:focus .input-group-addon, .input-group:active .input-group-addon, .input-group:visited .input-group-addon {
+    opacity: 1; }
 
 .input-group-addon {
   position: absolute;
@@ -57,7 +86,9 @@ button {
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  border-right: 1px solid #cacaca; }
+  border-right: 1px solid #cacaca;
+  opacity: .5;
+  transition: all 0.3s ease; }
 
 .login-page-background-image {
   position: fixed;
@@ -72,7 +103,7 @@ button {
 
 .logo-image {
   height: auto;
-  width: 60%; }
+  width: 65%; }
 
 .login-form-container {
   width: 240px;
@@ -86,6 +117,5 @@ button {
   display: flex;
   -ms-flex-align: center;
       align-items: center; }
-  .login-page-container .col2 {
-    width: 50%;
-    margin: 30px; }
+  .login-page-container .login-text {
+    font-size: 18px; }
