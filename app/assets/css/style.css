@@ -29,6 +29,14 @@ input {
 .col2 {
   width: 50%; }
 
+.input-hover {
+  color: #231f20;
+  opacity: 1 !important; }
+
+.input-reg {
+  color: #231f20;
+  opacity: .5 !important; }
+
 .side-by-side {
   display: -ms-flexbox;
   display: flex;
@@ -78,7 +86,6 @@ input {
   display: flex;
   padding: 5px 12px;
   position: absolute;
-  opacity: .5;
   transition: all 0.3s ease; }
 
 .login-page-background-image {
@@ -97,6 +104,7 @@ input {
       align-items: center;
   display: -ms-flexbox;
   display: flex;
+  height: 100vh;
   max-width: 800px;
   margin: auto; }
   .login-page-container .login-header-wrapper {
@@ -112,12 +120,13 @@ input {
     width: 60%; }
   .login-page-container .login-form-container {
     margin: auto;
+    margin-bottom: 50px;
     width: 240px; }
     .login-page-container .login-form-container .input-group:first-child {
       margin-top: 0px; }
 
 @media (max-width: 1025px) {
-  .login-page-container .login-page-background-image {
+  .login-page-background-image {
     background-position: 70%; } }
 
 @media (max-width: 600px) {

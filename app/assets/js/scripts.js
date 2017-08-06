@@ -8,10 +8,14 @@
  */
 (function ($, window, document, undefined) {
 
-  'use strict';
+    'use strict';
 
-  $(function () {
-    // FastShell
-  });
+    $(function () {
+
+        $('input').on('change', function () {
+            $(this).next('.input-group-addon').removeClass('input-reg').addClass('input-hover');
+        });
+
+    });
 
 })(jQuery, window, document);

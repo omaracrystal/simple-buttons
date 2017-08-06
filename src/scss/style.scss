@@ -73,6 +73,16 @@ input {
   width: 50%;
 }
 
+.input-hover {
+  color: $primary-black;
+  opacity: 1 !important;
+}
+
+.input-reg {
+  color: $primary-black;
+  opacity: .5 !important;
+}
+
 .side-by-side {
   display: flex;
   flex-direction: row;
@@ -138,7 +148,6 @@ input {
   display: flex;
   padding: 5px 12px;
   position: absolute;
-  opacity: .5;
   transition: $transition-hover;
 }
 
@@ -160,6 +169,7 @@ input {
 .login-page-container {
   align-items: center;
   display: flex;
+  height: 100vh;
   max-width: 800px;
   margin: auto;
 
@@ -182,6 +192,7 @@ input {
 
   .login-form-container {
     margin: auto;
+    margin-bottom: 50px;
     width: 240px;
 
     .input-group:first-child {
@@ -195,10 +206,8 @@ input {
 //tablet
 @media (max-width: $mq-tablet) {
 
-  .login-page-container {
-    .login-page-background-image {
-      background-position: 70%;
-    }
+  .login-page-background-image {
+    background-position: 70%;
   }
 }
 

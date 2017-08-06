@@ -22,32 +22,52 @@
 
       <div class="login-page-container side-by-side">
 
+        <!-- START LOGIN PAGE HEADER -->
         <div class="login-header-wrapper col2 stack">
-          <img class="logo-image" src="https://s3.amazonaws.com/btp-front-end-testing/logo.png">
+
+          <img class="logo-image" src="https://s3.amazonaws.com/btp-front-end-testing/logo.png" alt="Crazy Cat Lady logo">
+
           <p class="login-header-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-        </div>
 
+        </div>
+        <!-- END LOGIN PAGE HEADER -->
+
+        <!-- START LOGIN FORM -->
         <div class="login-form-wrapper col2 stack">
-          <form class="login-form-container">
+
+          <form class="login-form-container" role="form">
+
             <div class="input-group">
-              <div class="input-group-addon">
-                <img src="https://s3.amazonaws.com/btp-front-end-testing/person-Icon.png">
+
+              <input class="form-control" id="username" name="username" placeholder="Username" type="text" aria-label="username" autofocus required/>
+
+              <div class="input-group-addon input-reg">
+                <img src="https://s3.amazonaws.com/btp-front-end-testing/person-Icon.png" alt="username icon">
               </div>
-              <input class="form-control" id="username" name="username" placeholder="Username" type="text" required/>
+
             </div>
+
             <div class="input-group">
-              <div class="input-group-addon">
-                <img src="https://s3.amazonaws.com/btp-front-end-testing/lock-icon.png">
+
+              <input class="form-control" id="password" name="password" type="text" placeholder="Password" aria-label="password" required/>
+
+              <div class="input-group-addon input-reg">
+
+                <img src="https://s3.amazonaws.com/btp-front-end-testing/lock-icon.png" alt="password lock icon">
+
               </div>
-              <input class="form-control" id="password" name="password" type="text" placeholder="Password" required/>
+
             </div>
+
             <button class="btn-full" type="submit">
               Log In
             </button>
+
           </form>
         </div>
+        <!-- END LOGIN FORM -->
 
       </div>
     </div>
