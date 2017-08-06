@@ -14,6 +14,7 @@ $font-md: 15px;
 $font-lg: 18px;
 $bold: 600;
 $bolder: 800;
+$font-weight-normal: 500;
 
 //other
 $border-radius: 5px;
@@ -46,16 +47,67 @@ $mq-mobile: 600px;
   }
 }
 
+//pixel to rem
+@function parseInt($n) { /* 2 */
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+  $px: (); /* 3 */
+  $rem: (); /* 3 */
+
+  @each $value in $values { /* 4 */
+
+    @if $value == 0 or $value == auto { /* 5 */
+      $px: append($px, $value);
+      $rem: append($rem, $value);
+
+    } @else {
+
+      $unit: unit($value); /* 6 */
+      $val: parseInt($value); /* 6 */
+
+      @if $unit == "px" { /* 7 */
+        $px: append($px, $value);
+        $rem: append($rem, ($val / 10 + rem));
+      }
+
+      @if $unit == "rem" { /* 7 */
+        $px: append($px, ($val * 10 + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+
+  @if $px == $rem { /* 8 */
+    #{$property}: $px; /* 9 */
+
+  } @else {
+
+    #{$property}: $px; /* 9 */
+    #{$property}: $rem; /* 9 */
+  }
+}
+
+
 //------------------------- BASE -------------------------//
+html {
+  font-size: 62.5%;
+}
 
 body {
   background: $site-background;
   color: $primary-black;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-size: $font-base;
+  @include rem(font-size, $font-base);
   line-height: 1.5;
   margin: 0;
   padding: 0;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 button {
@@ -99,7 +151,7 @@ input {
 .btn-full {
   width: 100%;
   font-size: $font-base;
-  height: 70px;
+  @include rem(height, 70px);
   text-transform: uppercase;
 }
 
@@ -107,16 +159,16 @@ input {
 .input-group {
   align-items: center;
   display: flex;
-  height: 30px;
-  margin: 35px 0px;
+  @include rem(height, 30px);
+  @include rem(margin, 35px 0px);
   transition: $transition-hover;
   width: 100%;
 
   .form-control {
     border: 1px solid $border-gray;
     box-shadow: 1px -1px $border-box-shadow;
-    font-size: 16px;
-    padding: 15px 15px 15px 55px;
+    @include rem(font-size, $font-md);
+    @include rem(padding, 15px 15px 15px 55px);
     width: 100%;
 
     &:focus {
@@ -146,7 +198,7 @@ input {
   align-items: center;
   border-right: 1px solid #cacaca;
   display: flex;
-  padding: 5px 12px;
+  @include rem(padding, 5px 12px);
   position: absolute;
   transition: $transition-hover;
 }
@@ -170,33 +222,33 @@ input {
   align-items: center;
   display: flex;
   height: 100vh;
-  max-width: 800px;
+  @include rem(max-width, 800px);
   margin: auto;
 
   .login-header-wrapper {
     font-size: $font-md;
-    font-weight: 500;
-    margin-left: 50px;
+    font-weight: $font-weight-normal;
+    @include rem(margin-left, 50px);
 
     .login-header-text {
-      padding: 10px;
+      @include rem(padding, 10px);
     }
   }
 
   .logo-image {
     height: auto;
-    margin: 10px;
-    max-width: 220px;
+    @include rem(margin, 10px);
+    @include rem(max-width, 220px);
     width: 60%;
   }
 
   .login-form-container {
     margin: auto;
-    margin-bottom: 50px;
-    width: 240px;
+    @include rem(margin-bottom, 50px);
+    @include rem(width, 240px);
 
     .input-group:first-child {
-      margin-top: 0px;
+      margin-top: 0;
     }
   }
 }
@@ -219,18 +271,18 @@ input {
     height: auto;
 
     .login-header-text {
-      margin-bottom: 45px;
-      padding: 0px 30px;
+      @include rem(margin-bottom, 45px);
+      @include rem(padding, 0px 30px);
     }
 
     .logo-image {
-      margin-top: 35px;
+      @include rem(margin-top, 35px);
     }
 
     .col2 {
       align-items: center;
       margin: auto;
-      max-width: 400px;
+      @include rem(max-width, 400px);
       text-align: center;
       width: 100%;
     }
