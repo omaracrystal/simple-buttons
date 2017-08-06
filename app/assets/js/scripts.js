@@ -13,7 +13,7 @@
     $(function () {
 
         $('input').on('change', function () {
-            $(this).next('.input-group-addon').removeClass('input-reg').addClass('input-hover');
+            $(this).prev('.input-group-addon').removeClass('input-reg').addClass('input-hover');
         });
 
     });
