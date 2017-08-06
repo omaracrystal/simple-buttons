@@ -196,7 +196,7 @@ input {
 
 .input-group-addon {
   align-items: center;
-  border-right: 1px solid #cacaca;
+  border-right: 1px solid $border-box-shadow;
   display: flex;
   @include rem(padding, 5px 12px);
   position: absolute;
