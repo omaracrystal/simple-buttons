@@ -1,47 +1,30 @@
 body {
   background: #ffffff;
   color: #231f20;
-  font-size: 14px;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 14px;
   line-height: 1.5;
   margin: 0;
   padding: 0; }
 
-input {
-  border-radius: 5px;
-  cursor: default; }
-
-.input-group {
-  transition: all 0.3s ease; }
-  .input-group:hover input::-webkit-input-placeholder, .input-group:focus input::-webkit-input-placeholder, .input-group:visited input::-webkit-input-placeholder, .input-group:active input::-webkit-input-placeholder {
-    color: #231f20;
-    opacity: 1 !important;
-    /* for older chrome versions. may no longer apply. */ }
-  .input-group:hover input:-moz-placeholder, .input-group:focus input:-moz-placeholder, .input-group:visited input:-moz-placeholder, .input-group:active input:-moz-placeholder {
-    /* Firefox 18- */
-    color: #231f20;
-    opacity: 1 !important; }
-  .input-group:hover input::-moz-placeholder, .input-group:focus input::-moz-placeholder, .input-group:visited input::-moz-placeholder, .input-group:active input::-moz-placeholder {
-    /* Firefox 19+ */
-    color: #231f20;
-    opacity: 1 !important; }
-  .input-group:hover input:-ms-input-placeholder, .input-group:focus input:-ms-input-placeholder, .input-group:visited input:-ms-input-placeholder, .input-group:active input:-ms-input-placeholder {
-    color: #231f20; }
-
 button {
   background: #231f20;
+  border: none;
   border-radius: 5px;
   color: #f14986;
-  border: none;
-  letter-spacing: 1px;
-  font-weight: 600;
   cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
   text-decoration: none !important;
   transition: all 0.3s ease; }
   button:hover, button:focus, button:active {
-    color: #231f20;
     background: #f14986;
+    color: #231f20;
     font-weight: 800; }
+
+input {
+  border-radius: 5px;
+  cursor: default; }
 
 .col2 {
   width: 50%; }
@@ -65,76 +48,76 @@ button {
   text-transform: uppercase; }
 
 .input-group {
-  width: 100%;
-  margin: 35px 0px;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-align: center;
       align-items: center;
-  height: 30px; }
-  .input-group .form-control {
-    font-size: 16px;
-    padding: 15px 15px 15px 55px;
-    width: 100%;
-    border: 1px solid #eaedec;
-    box-shadow: 1px -1px #cacaca; }
-    .input-group .form-control:focus {
-      outline: #f14986 auto 5px; }
-  .input-group:hover .input-group-addon, .input-group:focus .input-group-addon, .input-group:active .input-group-addon, .input-group:visited .input-group-addon {
-    opacity: 1; }
-
-.input-group-addon {
-  position: absolute;
-  padding: 5px 12px;
   display: -ms-flexbox;
   display: flex;
+  height: 30px;
+  margin: 35px 0px;
+  transition: all 0.3s ease;
+  width: 100%; }
+  .input-group .form-control {
+    border: 1px solid #eaedec;
+    box-shadow: 1px -1px #cacaca;
+    font-size: 16px;
+    padding: 15px 15px 15px 55px;
+    width: 100%; }
+    .input-group .form-control:focus {
+      outline: #f14986 auto 5px; }
+  .input-group:hover .input-group-addon, .input-group:focus .input-group-addon, .input-group:visited .input-group-addon, .input-group:active .input-group-addon {
+    opacity: 1 !important; }
+  .input-group:hover input::-webkit-input-placeholder, .input-group:focus input::-webkit-input-placeholder, .input-group:visited input::-webkit-input-placeholder, .input-group:active input::-webkit-input-placeholder {
+    color: #231f20;
+    opacity: 1 !important; }
+
+.input-group-addon {
   -ms-flex-align: center;
       align-items: center;
   border-right: 1px solid #cacaca;
-  transition: all 0.3s ease;
-  opacity: .5; }
-
-.login-header-wrapper {
-  margin-left: 50px;
-  font-size: 15px;
-  font-weight: 500; }
-  .login-header-wrapper .login-header-text {
-    padding: 10px; }
-
-.login-page-background-image {
-  position: fixed;
-  background-image: url(https://s3.amazonaws.com/btp-front-end-testing/cats.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height: 100%;
-  opacity: .3;
-  z-index: -1; }
-
-.logo-image {
-  width: 60%;
-  max-width: 220px;
-  height: auto;
-  margin: 10px; }
-
-.login-form-container {
-  width: 240px;
-  margin: auto; }
-  .login-form-container .input-group:first-child {
-    margin-top: 0px; }
-
-.login-page-container {
-  max-width: 800px;
-  margin: auto;
-  height: 100vh;
   display: -ms-flexbox;
   display: flex;
+  padding: 5px 12px;
+  position: absolute;
+  opacity: .5;
+  transition: all 0.3s ease; }
+
+.login-page-background-image {
+  background-image: url(https://s3.amazonaws.com/btp-front-end-testing/cats.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+  opacity: .3;
+  width: 100%;
+  z-index: -1; }
+
+.login-page-container {
   -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 800px;
+  margin: auto; }
+  .login-page-container .login-header-wrapper {
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 50px; }
+    .login-page-container .login-header-wrapper .login-header-text {
+      padding: 10px; }
+  .login-page-container .logo-image {
+    height: auto;
+    margin: 10px;
+    max-width: 220px;
+    width: 60%; }
+  .login-page-container .login-form-container {
+    margin: auto;
+    width: 240px; }
+    .login-page-container .login-form-container .input-group:first-child {
+      margin-top: 0px; }
 
 @media (max-width: 1025px) {
-  .login-page-background-image {
+  .login-page-container .login-page-background-image {
     background-position: 70%; } }
 
 @media (max-width: 600px) {
@@ -145,12 +128,12 @@ button {
     .login-page-container .login-header-text {
       margin-bottom: 45px;
       padding: 0px 30px; }
-  .logo-image {
-    margin-top: 35px; }
-  .col2 {
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
-    -ms-flex-align: center;
-        align-items: center;
-    text-align: center; } }
+    .login-page-container .logo-image {
+      margin-top: 35px; }
+    .login-page-container .col2 {
+      -ms-flex-align: center;
+          align-items: center;
+      margin: auto;
+      max-width: 400px;
+      text-align: center;
+      width: 100%; } }
