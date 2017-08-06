@@ -30,3 +30,44 @@ Build a fully responsive login page from the provided design file for a new “C
 	• Please also let us know how long this took you to complete.
 	
 [![Mockup] (https://s3.amazonaws.com/btp-front-end-testing/Front-end-developer.png)]
+
+
+# CRAZY CAT LADY
+
+## Description:
+Simple HTML and CSS Login Page for Crazy Cat Lady website. 
+
+## Technologies:
+- Sass
+- HTML5
+- JavaScript
+- Jquery
+- Sass
+- Gulp & Browserify
+
+**Mockup**
+:----------------------------------:
+![](/app/assets/img/mockup.png)
+
+**Result Desktop**                 
+:----------------------------------:
+![](/app/assets/img/desktop.png)
+
+**Result Mobile**                   |    |  **Result Tablet**
+:----------------------------------:|:--:|:----------------------------------:
+![](/app/assets/img/mobile.png)      |    | ![](/app/assets/img/tablet.png)
+
+
+
+##  How to install & run
+
+```bash
+git clone https://github.com/omaracrystal/ByThePixel.git
+
+# Install dependencies
+npm install
+
+gulp
+```
+
+Your default web browser will be launched automatically with the url http://localhost:3000
