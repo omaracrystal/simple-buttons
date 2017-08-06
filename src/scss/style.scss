@@ -244,7 +244,6 @@ input {
 
   .login-form-container {
     margin: auto;
-    @include rem(margin-bottom, 50px);
     @include rem(width, 240px);
 
     .input-group:first-child {
@@ -285,6 +284,10 @@ input {
       @include rem(max-width, 400px);
       text-align: center;
       width: 100%;
+    }
+
+    .login-form-container {
+      @include rem(margin-bottom, 50px);
     }
   }
 }

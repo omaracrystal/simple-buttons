@@ -260,16 +260,6 @@ input {
     /* 6 */
     /* 6 */
     /* 7 */
-    margin-bottom: 50px;
-    /* 9 */
-    margin-bottom: 5rem;
-    /* 9 */
-    /* 3 */
-    /* 3 */
-    /* 4 */
-    /* 6 */
-    /* 6 */
-    /* 7 */
     width: 240px;
     /* 9 */
     width: 24rem;
@@ -335,4 +325,15 @@ input {
       max-width: 40rem;
       /* 9 */
       text-align: center;
-      width: 100%; } }
+      width: 100%; }
+    .login-page-container .login-form-container {
+      /* 3 */
+      /* 3 */
+      /* 4 */
+      /* 6 */
+      /* 6 */
+      /* 7 */
+      margin-bottom: 50px;
+      /* 9 */
+      margin-bottom: 5rem;
+      /* 9 */ } }
