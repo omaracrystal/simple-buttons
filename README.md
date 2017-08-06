@@ -29,7 +29,7 @@ Build a fully responsive login page from the provided design file for a new “C
 	• Do your best! We’re looking for accuracy to the design, ability to make good decisions with HTML and CSS and your ‘responsive' decision making.
 	• Please also let us know how long this took you to complete.
 	
-[![Mockup] (https://s3.amazonaws.com/btp-front-end-testing/Front-end-developer.png)]
+https://s3.amazonaws.com/btp-front-end-testing/Front-end-developer.png
 
 
 # CRAZY CAT LADY
@@ -42,7 +42,6 @@ Simple HTML and CSS Login Page for Crazy Cat Lady website.
 - HTML5
 - JavaScript
 - Jquery
-- Sass
 - Gulp & Browserify
 
 **Mockup**
