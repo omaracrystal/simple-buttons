@@ -1,6 +1,6 @@
-#HTML SASS Boilerpate
+# HTML SASS Boilerpate
 
-**Sass folders structure**
+## Sass folders structure**
 ```
 - global
 	    - base
@@ -17,7 +17,7 @@
 		
 ```
 
-###To get started
+### To get started
 
 ```
 git clone https://github.com/omaracrystal/html-sass-boilerplate.git
