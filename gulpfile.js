@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     gutil = require('gulp-util'),
     sass = require('gulp-sass'),
     cached = require('gulp-cached'),
@@ -14,7 +14,7 @@ var gulp = require('gulp'),
     package = require('./package.json');
 
 
-var banner = [
+let banner = [
   '/*!\n' +
   ' * <%= package.name %>\n' +
   ' * <%= package.title %>\n' +
@@ -25,6 +25,17 @@ var banner = [
   ' */',
   '\n'
 ].join('');
+
+let scss_dir = 'src/scss/';
+
+
+gulp.task('sass', () => {
+    gulp.src('src/*.scss')
+    .pipe(cached('sassfiles'))
+    .pipe(sassPartialsImported(scss_dir))
+    .pipe(sass({ includePaths: scss_dir }).on('error', sass.logError))
+    .pipe(gulp.dest('dist'));
+});
 
 gulp.task('css', function () {
     return gulp.src('src/scss/main.scss')
@@ -39,16 +50,6 @@ gulp.task('css', function () {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('app/assets/css'))
     .pipe(browserSync.reload({stream:true}));
-});
-
-let scss_dir = 'src/scss/';
-
-gulp.task('sass', () => {
-    gulp.src('src/*.scss')
-    .pipe(cached('sassfiles'))
-    .pipe(sassPartialsImported(scss_dir))
-    .pipe(sass({ includePaths: scss_dir }).on('error', sass.logError))
-    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('js',function(){
