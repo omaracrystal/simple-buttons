@@ -1,6 +1,8 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     sass = require('gulp-sass'),
+    cached = require('gulp-cached'),
+    sassPartialsImported = require('gulp-sass-partials-imported'),
     browserSync = require('browser-sync'),
     autoprefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
@@ -39,6 +41,16 @@ gulp.task('css', function () {
     .pipe(browserSync.reload({stream:true}));
 });
 
+let scss_dir = 'src/scss/';
+
+gulp.task('sass', () => {
+    gulp.src('src/*.scss')
+    .pipe(cached('sassfiles'))
+    .pipe(sassPartialsImported(scss_dir))
+    .pipe(sass({ includePaths: scss_dir }).on('error', sass.logError))
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('js',function(){
   gulp.src('src/js/scripts.js')
     .pipe(sourcemaps.init())
@@ -66,8 +78,10 @@ gulp.task('bs-reload', function () {
     browserSync.reload();
 });
 
-gulp.task('default', ['css', 'js', 'browser-sync'], function () {
+gulp.task('default', [ 'sass', 'css', 'js', 'browser-sync'], function () {
+    gulp.watch('src/*.scss', ['sass']);
     gulp.watch("src/scss/**/*.scss", ['css']);
+    gulp.watch('src/*.scss', ['sass']);
     gulp.watch("src/js/*.js", ['js']);
     gulp.watch("app/*.html", ['bs-reload']);
 });

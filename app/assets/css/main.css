@@ -58,7 +58,7 @@ body {
   text-rendering: optimizeLegibility; }
 
 button {
-  background: #D65E18;
+  background: #36d6aa;
   border: none;
   border-radius: 5px;
   color: #231f20;
@@ -70,10 +70,10 @@ button {
   transition: all 0.3s ease; }
 
 button:hover, button:focus {
-  background: #a84a13; }
+  background: #25b48d; }
 
 button:active, button:visited {
-  background: #632c0b; }
+  background: #18755b; }
 
 input {
   border-radius: 5px;
