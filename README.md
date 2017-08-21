@@ -1,15 +1,31 @@
-This is a HTML SASS Boilerpate
+#HTML SASS Boilerpate
 
-These Sass folders were added for convenience
+**Sass folders structure**
+```
 - global
-	- base
-	- helpers
-	- mixins
-	- variables
+	    - base
+	    - helpers
+	    - mixins
+	    - variables
 - site
-	- components
-		- base-components
-		- component-name.scss
-	- pages
-		- partials
-		- page-name.scss
+	    - components
+		        - base-components
+		        - component-name.scss
+	    - pages
+		        - partials
+		        - page-name.scss
+		
+```
+
+###To get started
+
+```
+git clone https://github.com/omaracrystal/html-sass-boilerplate.git
+```
+```
+npm install
+```
+```
+npm start
+```
+
