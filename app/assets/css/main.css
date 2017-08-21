@@ -1,4 +1,4 @@
-/* For quick start up - feel free to start styling in this file... once the file becomes bigger and harder to manage then copy and paste the information to their corresponding files above */
+/* For quick start up - feel free to start styling in this file... once the file becomes bigger and harder to manage then copy and paste the information to their corresponding files */
 /* 
 
 It is best to seperate the variables into the following files once this file grows:
@@ -46,16 +46,8 @@ body {
   background: #f2f2f2;
   color: #231f20;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   font-size: 14px;
-  /* 9 */
   font-size: 1.4rem;
-  /* 9 */
   line-height: 1.5;
   margin: 0;
   padding: 0;
@@ -92,27 +84,73 @@ main {
   text-align: center; }
 
 .btn-primary {
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   font-size: 15px;
-  /* 9 */
   font-size: 1.5rem;
-  /* 9 */
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   padding: 10px 20px;
-  /* 9 */
-  padding: 1rem 2rem;
-  /* 9 */ }
+  padding: 1rem 2rem; }
+
+/* 
+
+Helpers are placed here (only classes)
+
+Examples:
+1. row
+2. column
+3. error
+4. success
+etc ...
+
+*/
+/*
+
+Base components are the "atoms" of the website. It's the smallest piece that you can break down regular components.
+
+example of base components:
+1. Badge
+2. Button
+3. Example
+4. Icon
+3. Image Badge
+4. Menu-item
+5. etc
+
+*/
+/*
+
+Rename this file that corresponds with the name of the component. 
+This is wheere you will find regular components or the "molecules / organisms" in the overall page layout. 
+
+These components are built off the base components
+
+Some examples include:
+1. All Forms
+    - Login Form
+    - Contanct Form
+    - etc
+2. Menus 
+   - main menu
+   - side menu
+   - etc
+6. Search Boxes
+
+*/
+/* 
+
+Partials are essensial pieces that make up the overall page. 
+
+Such as:
+1. Header
+2. Footer
+
+*/
+/* 
+
+Rename this file to match the page that you wish to address layout and positioning of components
+
+Some examples include:
+1. Home Page
+2. Contact Page
+3. Profile Page
+4. News Feed Page
+
+*/

@@ -1,4 +1,4 @@
-/* For quick start up - feel free to start styling in this file... once the file becomes bigger and harder to manage then copy and paste the information to their corresponding files above */
+/* For quick start up - feel free to start styling in this file... once the file becomes bigger and harder to manage then copy and paste the information to their corresponding files */
 
 //------------------------- VARIABLES -------------------------//
 
@@ -8,17 +8,29 @@
 
 @import "global/mixins/mixins";
 
+
 //------------------------- BASE -------------------------//
 
 @import "global/base/base";
 
-//COMPONENTS
+//-------------------------- HELPERS ---------------------------//
+
+@import "global/helpers/helpers";
+
+//------------------------- COMPONENTS -------------------------//
+//Base Components
+@import "site/components/base-components/base-components";
+
+//All other Components
+@import "site/components/component-name";
 
 //------------------------- PAGES -------------------------//
 
 //PARTIALS (header and footer)
+@import "site/pages/partials/partials";
 
 //Home Page
+@import "site/pages/page-name";
 
 //------------------------- MEDIA QUERIES -------------------------//
 
