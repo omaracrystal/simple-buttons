@@ -1,0 +1,35 @@
+/* 
+
+It is best to seperate the variables into the following files once this file grows:
+
+1. Colors
+2. Typography or Fonts
+3. Urls
+4. Other
+5. Media Queries
+
+*/
+
+//colors another change
+$white: #ffffff;
+$site-background: #f2f2f2;
+$primary-black: #231f20;
+$primary-btn-bg: #D65E18;
+$border-gray: #eaedec;
+$border-box-shadow: #cacaca;
+
+//fonts
+$font-base: 14px;
+$font-md: 15px;
+$font-lg: 18px;
+$bold: 600;
+$bolder: 800;
+$font-weight-normal: 500;
+
+//other
+$border-radius: 5px;
+$transition-hover: all 0.3s ease;
+
+//media queries
+$mq-tablet: 1025px;
+$mq-mobile: 600px;

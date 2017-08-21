@@ -1,0 +1,62 @@
+/* 
+
+BASE 
+
+All element tags go here as "BASE" (no classes, no ids)
+
+Examples:
+1. html
+2. body
+3. input
+4. a
+5. button
+6. form
+etc ..
+
+*/
+
+html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    background: $site-background;
+    color: $primary-black;
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    @include rem(font-size, $font-base);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  
+  button {
+    @include button($primary-btn-bg, $primary-black);
+  }
+  
+  input {
+    border-radius: $border-radius;
+    cursor: default;
+  }
+
+  main {
+      margin: 10rem auto;
+      text-align: center;
+  }
+
+//------------------------- HELPERS -------------------------//
+
+
+//------------------------- COMPONENTS -------------------------//
+
+//BASE COMPONENTS
+
+.btn-primary {
+    @include rem(font-size, $font-md);
+    @include rem(padding, 10px 20px);
+}
+

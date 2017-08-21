@@ -1,3 +1,28 @@
+/* For quick start up - feel free to start styling in this file... once the file becomes bigger and harder to manage then copy and paste the information to their corresponding files above */
+/* 
+
+It is best to seperate the variables into the following files once this file grows:
+
+1. Colors
+2. Typography or Fonts
+3. Urls
+4. Other
+5. Media Queries
+
+*/
+/* 
+
+Mixins are functions that can be used within classes to set up most common properties. 
+
+1. You can include a mixin in a primary class while the sub classes would specify anything that the primary class does not such as width, height, margins, paddings etc. This requires more markup on HTML to make sure the button recieves all formatting, similar to bootstrap. 
+
+* For example:
+.btn-primary (would hold the mixin - while below would specify width and height)
+- .btn-small
+- .btn-large
+- .btn-full
+
+*/
 /* 
 
 BASE 
@@ -14,7 +39,6 @@ Examples:
 etc ..
 
 */
-/* For quick start up - feel free to start styling in this file... once the file becomes bigger and harder to manage then copy and paste the information to their corresponding files above */
 html {
   font-size: 62.5%; }
 
@@ -42,7 +66,7 @@ body {
   text-rendering: optimizeLegibility; }
 
 button {
-  background: #18D69A;
+  background: #D65E18;
   border: none;
   border-radius: 5px;
   color: #231f20;
@@ -52,10 +76,12 @@ button {
   text-decoration: none !important;
   text-transform: uppercase;
   transition: all 0.3s ease; }
-  button:hover, button:focus {
-    background: #13a879; }
-  button:active, button:visited {
-    background: #0b6348; }
+
+button:hover, button:focus {
+  background: #a84a13; }
+
+button:active, button:visited {
+  background: #632c0b; }
 
 input {
   border-radius: 5px;

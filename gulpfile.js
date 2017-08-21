@@ -25,7 +25,8 @@ var banner = [
 ].join('');
 
 gulp.task('css', function () {
-    return gulp.src('src/scss/style.scss')
+    return gulp.src('src/scss/main.scss')
+    .pipe(sass({includePaths : ['src/scss']}))
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 4 version'))
@@ -66,7 +67,8 @@ gulp.task('bs-reload', function () {
 });
 
 gulp.task('default', ['css', 'js', 'browser-sync'], function () {
-    gulp.watch("src/scss/**/*.scss", ['css']);
+    gulp.watch("src/scss/**/*.scss" ['css']);
+    gulp.watch( "src/scss/**/**/*.scss", ['css']);
     gulp.watch("src/js/*.js", ['js']);
     gulp.watch("app/*.html", ['bs-reload']);
 });

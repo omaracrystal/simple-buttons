@@ -1,0 +1,79 @@
+/* 
+
+Mixins are functions that can be used within classes to set up most common properties. 
+
+1. You can include a mixin in a primary class while the sub classes would specify anything that the primary class does not such as width, height, margins, paddings etc. This requires more markup on HTML to make sure the button recieves all formatting, similar to bootstrap. 
+
+* For example:
+.btn-primary (would hold the mixin - while below would specify width and height)
+- .btn-small
+- .btn-large
+- .btn-full
+
+*/
+
+//buttons
+@mixin button($bg, $text) {
+  background: $bg;
+  border: none;
+  border-radius: $border-radius;
+  color: $text;
+  cursor: pointer;
+  font-weight: $bold;
+  letter-spacing: 1px;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  transition: $transition-hover;
+
+  &:hover,
+  &:focus {
+    background: darken( $bg, 10%);
+  }
+
+  &:active,
+  &:visited {
+      background: darken( $bg, 25%);
+  }
+}
+
+//pixel to rem
+@function parseInt($n) { /* 2 */
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+  $px: (); /* 3 */
+  $rem: (); /* 3 */
+
+  @each $value in $values { /* 4 */
+
+    @if $value == 0 or $value == auto { /* 5 */
+      $px: append($px, $value);
+      $rem: append($rem, $value);
+
+    } @else {
+
+      $unit: unit($value); /* 6 */
+      $val: parseInt($value); /* 6 */
+
+      @if $unit == "px" { /* 7 */
+        $px: append($px, $value);
+        $rem: append($rem, ($val / 10 + rem));
+      }
+
+      @if $unit == "rem" { /* 7 */
+        $px: append($px, ($val * 10 + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+
+  @if $px == $rem { /* 8 */
+    #{$property}: $px; /* 9 */
+
+  } @else {
+
+    #{$property}: $px; /* 9 */
+    #{$property}: $rem; /* 9 */
+  }
+}
