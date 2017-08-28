@@ -12,30 +12,6 @@ Mixins are functions that can be used within classes to set up most common prope
 
 */
 
-//buttons
-@mixin button($bg, $text) {
-  background: $bg;
-  border: none;
-  border-radius: $border-radius;
-  color: $text;
-  cursor: pointer;
-  font-weight: $bold;
-  letter-spacing: 1px;
-  text-decoration: none !important;
-  text-transform: uppercase;
-  transition: $transition-hover;
-
-  &:hover,
-  &:focus {
-    background: darken( $bg, 10%);
-  }
-
-  &:active,
-  &:visited {
-      background: darken( $bg, 25%);
-  }
-}
-
 //pixel to rem
 @function parseInt($n) {
   @return $n / ($n * 0 + 1);

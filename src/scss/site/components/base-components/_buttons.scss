@@ -1,0 +1,61 @@
+$white: #ffffff;
+$btn-default: #000000;
+$btn-primary: #800080;
+$btn-secondary: #0000ff;
+$btn-success: #008000;
+$btn-warn: #ffa500;
+$btn-danger: #ff0000;
+$border-radius: 5px;
+$transition-hover: all 0.3s ease;
+$bold: 800;
+$btn-box-shadow: 1px 1px 2px 0 rgba(0,0,0,.5);
+
+@mixin button($bg) {
+  background: $bg;
+  border: 3px solid $bg;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    box-shadow: none;
+    background: none;
+    color: $bg;
+  }
+}
+
+button {
+  border-radius: $border-radius;
+  box-shadow: $btn-box-shadow;
+  color: $white;
+  cursor: pointer;
+  font-weight: $bold;
+  font-size: 20px;
+  padding: 10px 15px;
+  margin: 10px;
+  transition: $transition-hover;
+}
+
+.btn-default {
+  @include button($btn-default);
+}
+
+.btn-primary {
+  @include button($btn-primary);
+}
+
+.btn-secondary {
+  @include button($btn-secondary);
+}
+
+.btn-success {
+  @include button($btn-success);
+}
+
+.btn-warn {
+  @include button($btn-warn);
+}
+
+.btn-danger {
+ @include button($btn-danger);
+}

@@ -34,10 +34,6 @@ html {
     text-rendering: optimizeLegibility;
   }
   
-  button {
-    @include button($primary-btn-bg, $primary-black);
-  }
-  
   input {
     border-radius: $border-radius;
     cursor: default;
@@ -52,11 +48,3 @@ html {
 
 
 //------------------------- COMPONENTS -------------------------//
-
-//BASE COMPONENTS
-
-.btn-primary {
-    @include rem(font-size, $font-md);
-    @include rem(padding, 10px 20px);
-}
-

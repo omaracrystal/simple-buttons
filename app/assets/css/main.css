@@ -43,7 +43,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  background: #f2f2f2;
+  background: #f3f5f6;
   color: #231f20;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -57,24 +57,6 @@ body {
   -o-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
-button {
-  background: #36d6aa;
-  border: none;
-  border-radius: 5px;
-  color: #231f20;
-  cursor: pointer;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-decoration: none !important;
-  text-transform: uppercase;
-  transition: all 0.3s ease; }
-
-button:hover, button:focus {
-  background: #25b48d; }
-
-button:active, button:visited {
-  background: #18755b; }
-
 input {
   border-radius: 5px;
   cursor: default; }
@@ -82,12 +64,6 @@ input {
 main {
   margin: 10rem auto;
   text-align: center; }
-
-.btn-primary {
-  font-size: 15px;
-  font-size: 1.5rem;
-  padding: 10px 20px;
-  padding: 1rem 2rem; }
 
 /* 
 
@@ -101,20 +77,71 @@ Examples:
 etc ...
 
 */
-/*
+button {
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 20px;
+  padding: 10px 15px;
+  margin: 10px;
+  transition: all 0.3s ease; }
 
-Base components are the "atoms" of the website. It's the smallest piece that you can break down regular components.
+.btn-default {
+  background: #000000;
+  border: 3px solid #000000; }
 
-example of base components:
-1. Badge
-2. Button
-3. Example
-4. Icon
-3. Image Badge
-4. Menu-item
-5. etc
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default:visited {
+  box-shadow: none;
+  background: none;
+  color: #000000; }
 
-*/
+.btn-primary {
+  background: #800080;
+  border: 3px solid #800080; }
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:visited {
+  box-shadow: none;
+  background: none;
+  color: #800080; }
+
+.btn-secondary {
+  background: #0000ff;
+  border: 3px solid #0000ff; }
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary:visited {
+  box-shadow: none;
+  background: none;
+  color: #0000ff; }
+
+.btn-success {
+  background: #008000;
+  border: 3px solid #008000; }
+
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success:visited {
+  box-shadow: none;
+  background: none;
+  color: #008000; }
+
+.btn-warn {
+  background: #ffa500;
+  border: 3px solid #ffa500; }
+
+.btn-warn:hover, .btn-warn:focus, .btn-warn:active, .btn-warn:visited {
+  box-shadow: none;
+  background: none;
+  color: #ffa500; }
+
+.btn-danger {
+  background: #ff0000;
+  border: 3px solid #ff0000; }
+
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger:visited {
+  box-shadow: none;
+  background: none;
+  color: #ff0000; }
+
 /*
 
 Rename this file that corresponds with the name of the component. 
